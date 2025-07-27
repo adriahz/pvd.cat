@@ -6,32 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PVD.cat - En construcció</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: sans-serif;
-      background: #f4f4f4;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      flex-direction: column;
       text-align: center;
+      flex-direction: column;
+      backdrop-filter: brightness(0.7);
     }
     h1 {
-      color: #222;
+      font-size: 3em;
+      margin: 0.2em 0;
+    }
+    h2 {
+      font-size: 2em;
+      margin: 0.2em 0;
     }
     p {
-      color: #555;
+      font-size: 1.2em;
     }
     a {
-      color: #007acc;
-      text-decoration: none;
+      color: #ffffff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>🔧 Web en construcció</h1>
+  <h1>PVD Enginyeria</h1>
+  <h2>🔧 Web en construcció</h2>
   <p>Estem treballant per oferir-te el millor servei en energia solar.</p>
   <p>Contacte: <a href="mailto:info@pvd.cat">info@pvd.cat</a></p>
 </body>

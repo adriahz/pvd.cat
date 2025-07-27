@@ -1,1 +1,1 @@
-# Web en construcció per a pvd.cat
+# Web en construcció per a pvd.cat amb imatge de fons
