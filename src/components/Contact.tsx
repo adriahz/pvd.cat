@@ -150,7 +150,7 @@ export default function Contact() {
 
           <div className="space-y-6">
             <div className="bg-[#0A2140] rounded-3xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Contacta'ns directament</h3>
+              <h3 className="text-2xl font-bold mb-6">Contacta'ns</h3>
 
               <div className="space-y-4">
                 <a href="tel:+34900000000" className="flex items-start gap-4 group hover:translate-x-2 transition-transform">
