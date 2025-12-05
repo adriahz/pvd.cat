@@ -98,7 +98,7 @@ Instal·lacions amb garantia de qualitat i màxim estalvi energètic          </
             onClick={scrollToContact}
             className="bg-[#FFB800] text-[#0A2140] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#ffc933] transition-all hover:scale-105 inline-flex items-center gap-2"
           >
-            Consulta'ns el teu cas
+            Estudiem el teu cas
             <ArrowRight size={20} />
           </button>
         </div>
