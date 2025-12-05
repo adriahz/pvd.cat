@@ -9,7 +9,7 @@ export default function Portfolio() {
       title: 'Instal·lació residencial - Barcelona',
       type: 'Comunitat de veïns',
       power: '100 kW',
-      modules: 300',
+      modules: '300',
       icon: Home,
     },
     {
