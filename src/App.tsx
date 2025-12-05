@@ -20,7 +20,6 @@ function App() {
         <Hero />          
         <Services />
         <Portfolio />
-        <Calculator />
         <Contact />
       </main>
 
