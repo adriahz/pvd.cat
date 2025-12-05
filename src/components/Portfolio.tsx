@@ -53,7 +53,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <section id="installacions" className="py-24 g-gradient-to-b from-white to-[#0A2140]>
+    <section id="installacions" className="py-24 g-gradient-to-b from-white to-[#0A2140]">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
           Els projectes més recents
