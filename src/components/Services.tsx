@@ -91,7 +91,7 @@ export default function Services() {
 
         <div className="bg-green rounded-3xl p-12 text-center">
           <h3 className="text-3xl font-bold text-white mb-4">
-          Innovació i tecnologia         </h3>
+          Innovació i tecnologia a cada projecte         </h3>
           <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto">
 Instal·lacions amb garantia de qualitat i màxim estalvi energètic          </p>
           <button
