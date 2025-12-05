@@ -8,7 +8,7 @@ export default function Header() {
       "
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-white font-bold text-xl">PVD Enginyeria</div>
+        <img src="/src/assets/pvd_logo_360x130_(white).png" alt="PVD Enginyeria" className="h-10" />
 
         <ul className="flex gap-6 text-white">
 
