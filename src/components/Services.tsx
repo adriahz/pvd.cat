@@ -91,8 +91,7 @@ export default function Services() {
 
         <div className="bg-green rounded-3xl p-12 text-center">
           <h3 className="text-3xl font-bold text-white mb-4">
-            Finançament a mida
-          </h3>
+          Instal·lacions amb garantia de qualitat i màxim estalvi energètic         </h3>
           <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto">
             Treballem amb entitats financeres per oferir-te finançament del 100%
           </p>
