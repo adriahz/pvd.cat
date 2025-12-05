@@ -214,7 +214,7 @@ export default function Contact() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#0A2140] mt-1">✓</span>
-                  <span>Pressupost detallat sense compromís</span>
+                  <span>Pressupost detallat del projecte</span>
                 </li>
               </ul>
             </div>
