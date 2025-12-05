@@ -18,6 +18,14 @@ export default function Portfolio() {
       power: '45 kW',
       icon: Building2,
     },
+        {
+      image:
+        'https://images.pexels.com/photos/8853507/pexels-photo-8853507.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Comunitat de veïns - Girona',
+      type: 'Comunitat',
+      power: '18 kW',
+      icon: Users,
+    },
     {
       image:
         'https://images.pexels.com/photos/8853507/pexels-photo-8853507.jpeg?auto=compress&cs=tinysrgb&w=800',
