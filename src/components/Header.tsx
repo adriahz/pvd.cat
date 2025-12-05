@@ -12,7 +12,13 @@ export default function Header() {
 
         <ul className="flex gap-6 text-white">
 
-         
+          <li>
+            <a
+              href="#contact"
+              className="px-4 py-2 bg-yellow-400 text-black rounded"
+            >
+              Contacta
+            </a>
           </li>
         </ul>
       </nav>
