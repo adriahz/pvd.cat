@@ -103,7 +103,7 @@ export default function Portfolio() {
                 <span className="font-semibold text-white">
                   {currentInstallation.modules}
                 </span>{' '}
-                · Potència instal·lada:{' '}
+                · Potència nominal:{' '}
                 <span className="font-semibold text-[#FFB800]">
                   {currentInstallation.power}
                 </span>
