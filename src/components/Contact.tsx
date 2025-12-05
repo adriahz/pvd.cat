@@ -1,7 +1,7 @@
 import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useState } from 'react';
 
-const FORM_ENDPOINT = 'https://formspree.io/f/EL_TEU_ID'; // 👈 SUBSTITUEIX AIXÒ
+const FORM_ENDPOINT = 'https://formspree.io/f/xldqlodz';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
