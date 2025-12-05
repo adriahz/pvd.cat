@@ -35,8 +35,7 @@ export default function Hero() {
             onClick={() => scrollToSection('contacte')}
             className="bg-[#FFB800] text-[#0A2140] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#ffc933] transition-all hover:scale-105 flex items-center gap-2 shadow-xl"
           >
-            Contacta amb nosaltres
-            <ArrowRight size={20} />
+Demana pressupost            <ArrowRight size={20} />
           </button>
           <button
             onClick={() => scrollToSection('installacions')}
