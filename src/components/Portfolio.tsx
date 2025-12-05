@@ -7,7 +7,7 @@ export default function Portfolio() {
       image:
         'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800',
       title: 'Pavelló municipal - Mieres',
-      type: 'Comunitat de veïns',
+      type: 'Comunitat energètica',
       power: '100 kW',
       modules: '300',
       icon: Home,
