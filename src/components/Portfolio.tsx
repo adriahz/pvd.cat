@@ -1,4 +1,5 @@
-import { Building2, Home, Users } from 'lucide-react';
+import { Building2, Home, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Portfolio() {
   const installations = [
@@ -8,6 +9,7 @@ export default function Portfolio() {
       title: 'Instal·lació residencial - Barcelona',
       type: 'Residencial',
       power: '6.5 kW',
+      modules: '14',
       icon: Home,
     },
     {
@@ -16,15 +18,8 @@ export default function Portfolio() {
       title: 'Nau industrial - Sabadell',
       type: 'Industrial',
       power: '45 kW',
+      modules: '80',
       icon: Building2,
-    },
-        {
-      image:
-        'https://images.pexels.com/photos/8853507/pexels-photo-8853507.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Comunitat de veïns - Girona',
-      type: 'Comunitat',
-      power: '18 kW',
-      icon: Users,
     },
     {
       image:
@@ -32,6 +27,7 @@ export default function Portfolio() {
       title: 'Comunitat de veïns - Girona',
       type: 'Comunitat',
       power: '18 kW',
+      modules: '40',
       icon: Users,
     },
     {
@@ -40,6 +36,7 @@ export default function Portfolio() {
       title: 'Comunitat de veïns - Vic',
       type: 'Comunitat',
       power: '22 kW',
+      modules: '50',
       icon: Users,
     },
     {
@@ -48,54 +45,104 @@ export default function Portfolio() {
       title: 'Comunitat de veïns - Manresa',
       type: 'Comunitat',
       power: '30 kW',
+      modules: '72',
       icon: Users,
     },
   ];
 
+  const [current, setCurrent] = useState(0);
+  const length = installations.length;
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
+  };
+
+  const currentInstallation = installations[current];
+
   return (
-    <section id="installacions" className="py-24 g-gradient-to-b from-white to-[#0A2140]">
+    <section
+      id="installacions"
+      className="py-24 bg-gradient-to-b from-white to-[#0A2140]"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
           Els projectes més recents
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {installations.map((installation, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
-            >
-              <div className="relative">
-                <img
-                  src={installation.image}
-                  alt={installation.title}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-lg flex items-center gap-2 shadow">
-                  <installation.icon className="w-4 h-4 text-gray-700" />
-                  <span className="text-sm font-medium text-gray-700">
-                    {installation.type}
-                  </span>
-                </div>
+        <div className="relative max-w-4xl mx-auto">
+          {/* Slide principal */}
+          <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl">
+            <img
+              src={currentInstallation.image}
+              alt={currentInstallation.title}
+              className="w-full h-full object-cover"
+            />
+
+            {/* Degradat sobre la imatge */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
+
+            {/* Text sobre el degradat */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+              <div className="flex items-center gap-3 mb-3">
+                <currentInstallation.icon className="w-6 h-6 text-[#FFB800]" />
+                <span className="text-sm font-semibold uppercase tracking-wide text-white/80">
+                  {currentInstallation.type}
+                </span>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-[#234FA1] transition-colors">
-                  {installation.title}
-                </h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                {currentInstallation.title}
+              </h3>
 
-<div className="mt-4 space-y-1 text-left">
-  <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors">
-    Nº mòduls: <span className="font-semibold">{installation.modules}</span>
-  </p>
-  <p className="text-sm text-gray-600 group-hover:text-white/80 transition-colors">
-    Potència: <span className="font-semibold">{installation.power}</span>
-  </p>
-</div>
-
-              </div>
+              <p className="text-sm sm:text-base text-white/85">
+                Nº mòduls:{' '}
+                <span className="font-semibold text-white">
+                  {currentInstallation.modules}
+                </span>{' '}
+                · Potència:{' '}
+                <span className="font-semibold text-[#FFB800]">
+                  {currentInstallation.power}
+                </span>
+              </p>
             </div>
-          ))}
+          </div>
+
+          {/* Botons esquerra/dreta */}
+          <button
+            type="button"
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-sm transition-all"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <button
+            type="button"
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-sm transition-all"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Puntets de navegació */}
+          <div className="flex justify-center gap-2 mt-6">
+            {installations.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => setCurrent(index)}
+                className={`h-2.5 w-2.5 rounded-full transition-all ${
+                  index === current
+                    ? 'bg-[#FFB800] w-6'
+                    : 'bg-white/50 hover:bg-white/80'
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
