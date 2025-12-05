@@ -17,7 +17,7 @@ export default function Header() {
               href="#contact"
               className="px-4 py-2 bg-yellow-400 text-black rounded"
             >
-              Contacte
+              Contacta
             </a>
           </li>
         </ul>
