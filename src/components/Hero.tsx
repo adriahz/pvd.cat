@@ -58,7 +58,7 @@ export default function Hero() {
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-[#FFB800] mb-2">25 anys</div>
-            <div className="text-white/80 text-sm">Garantia</div>
+            <div className="text-white/80 text-sm">de garantia</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-[#FFB800] mb-2">100%</div>
