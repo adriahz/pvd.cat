@@ -74,10 +74,10 @@ export default function Services() {
 
           <div className="bg-gradient-to-br from-[#FFB800] to-[#ffc933] rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-center items-center text-center">
             <h3 className="text-2xl font-bold text-[#0A2140] mb-4">
-              I molt més...
+              Servei 360º
             </h3>
             <p className="text-[#0A2140]/80 mb-6">
-              Monitorització en temps real, suport tècnic 24/7 i assessorament continu
+              Despreocupa't i beneficia't del servei claus en mà
             </p>
             <button
               onClick={scrollToContact}
