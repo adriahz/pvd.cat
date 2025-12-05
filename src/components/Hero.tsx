@@ -42,7 +42,7 @@ Demana pressupost            <ArrowRight size={20} />
             className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all flex items-center gap-2"
           >
             <Play size={20} />
-            Projectes
+            Projectes recents
           </button>
         </div>
 
