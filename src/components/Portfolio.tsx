@@ -72,7 +72,9 @@ export default function Portfolio() {
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
           Els projectes més recents
         </h2>
-
+         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Demana el teu estudi personalitzat gratuït i sense compromís
+          </p>
         <div className="relative max-w-4xl mx-auto">
           {/* Slide principal */}
           <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl">
