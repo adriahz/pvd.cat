@@ -19,7 +19,6 @@ function App() {
       <main className="pt-0">
         <Hero />          
         <Services />
-        <HowItWorks />               
         <Serveis />
         <Portfolio />
         <Calculator />
