@@ -197,7 +197,7 @@ export default function Contact() {
 
             <div className="bg-gradient-to-br from-[#FFB800] to-[#ffc933] rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-[#0A2140] mb-4">
-                Estudi gratuït inclou:
+                Et fem un estudi al detall:
               </h3>
               <ul className="space-y-3 text-[#0A2140]">
                 <li className="flex items-start gap-2">
