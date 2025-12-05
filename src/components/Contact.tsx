@@ -158,7 +158,7 @@ export default function Contact() {
                     <Phone size={24} className="text-[#0A2140]" />
                   </div>
                   <div>
-                    <div className="text-sm text-white/80 mb-1">Telèfon/Whatsapp</div>
+                    <div className="text-sm text-white/80 mb-1">Telèfon i Whatsapp</div>
                     <div className="font-semibold group-hover:text-[#FFB800] transition-colors">+34 972 604 330</div>
                   </div>
                 </a>
@@ -169,7 +169,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-white/80 mb-1">Email</div>
-                    <div className="font-semibold group-hover:text-[#FFB800] transition-colors break-all">info@pvdenginyeria.cat</div>
+                    <div className="font-semibold group-hover:text-[#FFB800] transition-colors break-all">info@pvd.cat</div>
                   </div>
                 </a>
 
@@ -179,8 +179,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-white/80 mb-1">Ubicació</div>
-                    <div className="font-semibold">Catalunya</div>
-                    <div className="text-sm text-white/70 mt-1">Servei a tota Catalunya</div>
+                    <div className="font-semibold">RIPOLL (Girona)</div>
+                    <div className="text-sm text-white/70 mt-1">Ctra/Barcelona, 51</div>
                   </div>
                 </div>
 
