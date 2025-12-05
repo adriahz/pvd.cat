@@ -143,7 +143,7 @@ export default function Contact() {
               </button>
 
               <p className="text-center text-gray-500 text-sm mt-4">
-                Resposta en menys de 24 hores · Sense compromís
+                Contactarem amb tu en 24/48 hores
               </p>
             </form>
           </div>
@@ -158,8 +158,8 @@ export default function Contact() {
                     <Phone size={24} className="text-[#0A2140]" />
                   </div>
                   <div>
-                    <div className="text-sm text-white/80 mb-1">Telèfon</div>
-                    <div className="font-semibold group-hover:text-[#FFB800] transition-colors">900 000 000</div>
+                    <div className="text-sm text-white/80 mb-1">Telèfon/Whatsapp</div>
+                    <div className="font-semibold group-hover:text-[#FFB800] transition-colors">+34 972 604 330</div>
                   </div>
                 </a>
 
