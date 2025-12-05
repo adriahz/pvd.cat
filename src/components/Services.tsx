@@ -27,7 +27,7 @@ export default function Services() {
     {
       icon: Shield,
       title: 'Monitorizació 24/7',
-      description: 'Garantia de producte fins a 25 anys, inversors 10 anys, i servei de manteniment disponible',
+      description: 'Monitorització en temps real, suport tècnic 24/7 i assessorament continu',
     },
   ];
 
