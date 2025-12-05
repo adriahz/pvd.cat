@@ -1,6 +1,8 @@
 import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useState } from 'react';
 
+const FORM_ENDPOINT = 'https://formspree.io/f/EL_TEU_ID'; // 👈 SUBSTITUEIX AIXÒ
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,12 +13,51 @@ export default function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'ok' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Formulari enviat! (Funcionalitat de demo)');
+    setStatus('sending');
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nom: formData.name,
+          telefon: formData.phone,
+          email: formData.email,
+          adreca: formData.address,
+          consum: formData.consumption,
+          missatge: formData.message,
+          origen: 'Formulari web PVD Enginyeria',
+        }),
+      });
+
+      if (res.ok) {
+        setStatus('ok');
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          address: '',
+          consumption: '',
+          message: '',
+        });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -136,40 +177,59 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-[#FFB800] text-[#0A2140] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#ffc933] transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
+                disabled={status === 'sending'}
+                className="w-full bg-[#FFB800] text-[#0A2140] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#ffc933] transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg disabled:opacity-70 disabled:hover:scale-100"
               >
                 <Send size={20} />
-                Enviar sol·licitud
+                {status === 'sending' ? 'Enviant...' : 'Enviar sol·licitud'}
               </button>
 
-              <p className="text-center text-gray-500 text-sm mt-4">
-                Contactarem amb tu en 24/48 hores
-              </p>
+              {status === 'ok' && (
+                <p className="text-center text-green-600 text-sm mt-4">
+                  Hem rebut la teva sol·licitud. Et contactarem en 24/48 hores.
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="text-center text-red-600 text-sm mt-4">
+                  Hi ha hagut un error en enviar el formulari. Torna-ho a provar més tard.
+                </p>
+              )}
             </form>
           </div>
 
+          {/* Columna dreta: info de contacte (sense canvis) */}
           <div className="space-y-6">
             <div className="bg-[#0A2140] rounded-3xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Contacta'ns</h3>
+              <h3 className="text-2xl font-bold mb-6">Contacta'ns directament</h3>
 
               <div className="space-y-4">
-                <a href="tel:+34900000000" className="flex items-start gap-4 group hover:translate-x-2 transition-transform">
+                <a
+                  href="tel:+34972604330"
+                  className="flex items-start gap-4 group hover:translate-x-2 transition-transform"
+                >
                   <div className="w-12 h-12 bg-[#FFB800] rounded-xl flex items-center justify-center flex-shrink-0">
                     <Phone size={24} className="text-[#0A2140]" />
                   </div>
                   <div>
                     <div className="text-sm text-white/80 mb-1">Telèfon i Whatsapp</div>
-                    <div className="font-semibold group-hover:text-[#FFB800] transition-colors">+34 972 604 330</div>
+                    <div className="font-semibold group-hover:text-[#FFB800] transition-colors">
+                      +34 972 604 330
+                    </div>
                   </div>
                 </a>
 
-                <a href="mailto:info@pvdenginyeria.cat" className="flex items-start gap-4 group hover:translate-x-2 transition-transform">
+                <a
+                  href="mailto:info@pvd.cat"
+                  className="flex items-start gap-4 group hover:translate-x-2 transition-transform"
+                >
                   <div className="w-12 h-12 bg-[#FFB800] rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail size={24} className="text-[#0A2140]" />
                   </div>
                   <div>
                     <div className="text-sm text-white/80 mb-1">Email</div>
-                    <div className="font-semibold group-hover:text-[#FFB800] transition-colors break-all">info@pvd.cat</div>
+                    <div className="font-semibold group-hover:text-[#FFB800] transition-colors break-all">
+                      info@pvd.cat
+                    </div>
                   </div>
                 </a>
 
@@ -197,7 +257,7 @@ export default function Contact() {
 
             <div className="bg-gradient-to-br from-[#FFB800] to-[#ffc933] rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-[#0A2140] mb-4">
-                El pressupost inclou:
+                Estudi gratuït inclou:
               </h3>
               <ul className="space-y-3 text-[#0A2140]">
                 <li className="flex items-start gap-2">
@@ -214,7 +274,7 @@ export default function Contact() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#0A2140] mt-1">✓</span>
-                  <span>Pressupost detallat del projecte</span>
+                  <span>Pressupost detallat sense compromís</span>
                 </li>
               </ul>
             </div>
