@@ -24,7 +24,7 @@ export default function Hero() {
           Fotovoltaica & eficiència energètica<br />
         </h1>
         <p className="text-xl sm:text-2xl lg:text-3xl text-white/90 mb-4 font-light">
-          Projectes d'enginyeria
+          Projectes d'enginyeria al detall
         </p>
         <p className="text-lg sm:text-xl text-white/80 mb-12 max-w-3xl mx-auto">
           Disseny  -  Instal·lació  -  Legalització
