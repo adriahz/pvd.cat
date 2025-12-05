@@ -91,10 +91,9 @@ export default function Services() {
 
         <div className="bg-green rounded-3xl p-12 text-center">
           <h3 className="text-3xl font-bold text-white mb-4">
-          Instal·lacions amb garantia de qualitat i màxim estalvi energètic         </h3>
+          Innovació i tecnologia         </h3>
           <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto">
-            Treballem amb entitats financeres per oferir-te finançament del 100%
-          </p>
+Instal·lacions amb garantia de qualitat i màxim estalvi energètic          </p>
           <button
             onClick={scrollToContact}
             className="bg-[#FFB800] text-[#0A2140] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#ffc933] transition-all hover:scale-105 inline-flex items-center gap-2"
