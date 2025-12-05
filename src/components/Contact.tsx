@@ -178,9 +178,8 @@ export default function Contact() {
                     <MapPin size={24} className="text-[#0A2140]" />
                   </div>
                   <div>
-                    <div className="text-sm text-white/80 mb-1">Ubicació</div>
+                    <div className="text-sm text-white/80 mb-1">Ctra/Barcelona, 51</div>
                     <div className="font-semibold">RIPOLL (Girona)</div>
-                    <div className="text-sm text-white/70 mt-1">Ctra/Barcelona, 51</div>
                   </div>
                 </div>
 
