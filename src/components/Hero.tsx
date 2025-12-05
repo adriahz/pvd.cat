@@ -27,7 +27,7 @@ export default function Hero() {
           Projectes d'enginyeria claus en mà
         </p>
         <p className="text-lg sm:text-xl text-white/80 mb-12 max-w-3xl mx-auto">
-          Disseny  -  Instal·lació  -  Legalització
+          Disseny  +  Instal·lació  +  Legalització
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
