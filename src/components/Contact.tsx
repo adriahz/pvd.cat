@@ -188,7 +188,7 @@ export default function Contact() {
                     <Clock size={24} className="text-[#0A2140]" />
                   </div>
                   <div>
-                    <div className="font-semibold">Dll - Dv: 9:00 - 18:00</div>
+                    <div className="font-semibold">Horari d'atenció: 9:00 - 18:00</div>
                     <div className="text-sm text-white/70 mt-1">Visites: 16:00 - 20:00</div>
                   </div>
                 </div>
