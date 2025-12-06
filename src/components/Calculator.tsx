@@ -12,7 +12,7 @@ export default function Calculator() {
     <section className="py-24 bg-[#0A2140] relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+          backgroundImage: `url(${import.meta.env.VITE_CALCULATOR_IMAGE})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}></div>

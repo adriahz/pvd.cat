@@ -22,7 +22,7 @@ export default function Header() {
       `}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <img src="/src/assets/pvd_logo_360x130_(white).png" alt="PVD Enginyeria" className="h-16" />
+        <img src={import.meta.env.VITE_LOGO_IMAGE} alt="PVD Enginyeria" className="h-16" />
 
         <ul className="flex gap-6 text-white">
 

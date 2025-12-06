@@ -4,8 +4,7 @@ import { useState } from 'react';
 export default function Portfolio() {
   const installations = [
     {
-      image:
-        'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: import.meta.env.VITE_PORTFOLIO_IMAGE_1,
       title: 'Pavelló municipal - Mieres (Girona)',
       type: 'Comunitat energètica',
       power: '100 kW',
@@ -13,8 +12,7 @@ export default function Portfolio() {
       icon: Home,
     },
     {
-      image:
-        'https://images.pexels.com/photos/9875420/pexels-photo-9875420.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: import.meta.env.VITE_PORTFOLIO_IMAGE_2,
       title: 'Nau industrial - Sabadell',
       type: 'Industrial',
       power: '45 kW',
@@ -22,8 +20,7 @@ export default function Portfolio() {
       icon: Building2,
     },
     {
-      image:
-        'https://images.pexels.com/photos/8853507/pexels-photo-8853507.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: import.meta.env.VITE_PORTFOLIO_IMAGE_3,
       title: 'Comunitat de veïns - Girona',
       type: 'Comunitat',
       power: '18 kW',
@@ -31,8 +28,7 @@ export default function Portfolio() {
       icon: Users,
     },
     {
-      image:
-        'https://images.pexels.com/photos/8853507/pexels-photo-8853507.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: import.meta.env.VITE_PORTFOLIO_IMAGE_3,
       title: 'Comunitat de veïns - Vic',
       type: 'Comunitat',
       power: '22 kW',
@@ -40,8 +36,7 @@ export default function Portfolio() {
       icon: Users,
     },
     {
-      image:
-        'https://images.pexels.com/photos/8853507/pexels-photo-8853507.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: import.meta.env.VITE_PORTFOLIO_IMAGE_3,
       title: 'Comunitat de veïns - Manresa',
       type: 'Comunitat',
       power: '30 kW',
