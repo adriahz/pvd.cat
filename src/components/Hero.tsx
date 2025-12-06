@@ -21,7 +21,7 @@ export default function Hero() {
 
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-32 md:pt-40">
         <img src="/src/assets/pvd_logo_360x130_(white).png" alt="PVD Enginyeria" className="h-20 mx-auto mb-8" />
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-5xl sm:text-6xl lg:text-66xl font-bold text-white mb-6 leading-tight">
           Fotovoltaica & eficiència energètica<br />
         </h1>
         <p className="text-xl sm:text-2xl lg:text-3xl text-white/90 mb-4 font-light">
