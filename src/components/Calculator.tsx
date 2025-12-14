@@ -1,4 +1,5 @@
 import { Calculator as CalcIcon, ArrowRight } from 'lucide-react';
+import calculatorImage from '../assets/calculator.jpg';
 
 export default function Calculator() {
   const scrollToContact = () => {
@@ -11,11 +12,14 @@ export default function Calculator() {
   return (
     <section className="py-24 bg-[#0A2140] relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url(${import.meta.env.VITE_CALCULATOR_IMAGE})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${calculatorImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        ></div>
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

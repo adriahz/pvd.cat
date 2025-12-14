@@ -1,10 +1,17 @@
 import { Building2, Home, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
+import portfolio1 from '../assets/portfolio-1.jpg';
+import portfolio2 from '../assets/Portfolio-2.jpg';
+import portfolio3 from '../assets/portfolio-3.jpg';
+import portfolio4 from '../assets/Portfolio-4.jpg';
+import portfolio5 from '../assets/Portfolio-5.jpg';
+import portfolio6 from '../assets/Portfolio-6.jpg';
+import portfolio7 from '../assets/Portfolio-7.jpg';
 
 export default function Portfolio() {
   const installations = [
     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_1,
+      image: portfolio1,
       title: 'Pavelló municipal - Mieres (Girona)',
       type: 'Comunitat energètica',
       power: '100 kW + 52kW emmagatzematge amb limitació d`exportació',
@@ -12,7 +19,7 @@ export default function Portfolio() {
       icon: Users,
     },
     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_2,
+      image: portfolio2,
       title: 'Residencial aïllada - Masia a Ripoll (Girona)',
       type: 'Autoconsum',
       power: '8 kW + 30kWh emmagatzematge',
@@ -20,7 +27,7 @@ export default function Portfolio() {
       icon: Home,
     },
     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_3,
+      image: portfolio3,
       title: 'Residencial - Masia a Llaés (Girona)',
       type: 'Autoconsum',
       power: '6 kW',
@@ -28,7 +35,7 @@ export default function Portfolio() {
       icon: Home,
     },
     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_4,
+      image: portfolio4,
       title: 'Residencial - Ripoll (Girona)',
       type: 'Autoconsum',
       power: '6 kW + backup de protecció contra apagades de xarxa',
@@ -36,7 +43,7 @@ export default function Portfolio() {
       icon: Home,
     },
     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_5,
+      image: portfolio5,
       title: 'Residencial - Masia a Ogassa (Girona)',
       type: 'Autoconsum',
       power: '4 kW',
@@ -44,7 +51,7 @@ export default function Portfolio() {
       icon: Home,
     },
     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_6,
+      image: portfolio6,
       title: 'Residencial - Montesquiu (Barcelona)',
       type: 'Autoconsum',
       power: '6 kW',
@@ -52,7 +59,7 @@ export default function Portfolio() {
       icon: Home,
     },
     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_7,
+      image: portfolio7,
       title: 'Industrial/Residencial - Fusteria i vivenda (Ripoll)',
       type: 'Industrial',
       power: '10 kW',

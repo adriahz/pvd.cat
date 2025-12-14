@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logoImage from '../assets/logo.png';
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,7 +23,7 @@ export default function Header() {
       `}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <img src={import.meta.env.VITE_LOGO_IMAGE} alt="PVD Enginyeria" className="h-16" />
+        <img src={logoImage} alt="PVD Enginyeria" className="h-16" />
 
         <ul className="flex gap-6 text-white">
 

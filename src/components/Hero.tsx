@@ -1,4 +1,6 @@
 import { ArrowRight, Play } from 'lucide-react';
+import heroImage from '../assets/hero.jpg';
+import logoImage from '../assets/logo.png';
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
@@ -13,14 +15,14 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${import.meta.env.VITE_HERO_IMAGE})`,
+          backgroundImage: `url(${heroImage})`,
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A2140]/95 via-[#0A2140]/80 to-[#0A2140]/60"></div>
       </div>
 
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-32 md:pt-40">
-        <img src={import.meta.env.VITE_LOGO_IMAGE} alt="PVD Enginyeria" className="h-20 mx-auto mb-8" />
+        <img src={logoImage} alt="PVD Enginyeria" className="h-20 mx-auto mb-8" />
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Fotovoltaica & eficiència energètica<br />
         </h1>
