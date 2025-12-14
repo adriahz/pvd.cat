@@ -28,33 +28,33 @@ export default function Portfolio() {
       icon: Home,
     },
     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_3,
+      image: import.meta.env.VITE_PORTFOLIO_IMAGE_4,
       title: 'Residencial - Ripoll (Girona)',
       type: 'Autoconsum',
       power: '6 kW + backup de protecció contra apagades de xarxa',
-      modules: '12',
+      modules: '15',
       icon: Home,
     },
     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_3,
+      image: import.meta.env.VITE_PORTFOLIO_IMAGE_5,
       title: 'Residencial - Masia a Ogassa (Girona)',
       type: 'Autoconsum',
       power: '4 kW',
       modules: '12',
       icon: Home,
     },
-     {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_3,
+    {
+      image: import.meta.env.VITE_PORTFOLIO_IMAGE_6,
       title: 'Residencial - Montesquiu (Barcelona)',
       type: 'Autoconsum',
       power: '6 kW',
       modules: '12',
       icon: Home,
     },
-         {
-      image: import.meta.env.VITE_PORTFOLIO_IMAGE_3,
-      title: 'Industrial/Residencial - Fusteria (Ripoll)',
-      type: 'Industiral',
+    {
+      image: import.meta.env.VITE_PORTFOLIO_IMAGE_7,
+      title: 'Industrial/Residencial - Fusteria i vivenda (Ripoll)',
+      type: 'Industrial',
       power: '10 kW',
       modules: '23',
       icon: Building2,
@@ -86,11 +86,11 @@ export default function Portfolio() {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Slide principal */}
-          <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl bg-gray-900">
             <img
               src={currentInstallation.image}
               alt={currentInstallation.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
 
             {/* Degradat sobre la imatge */}
